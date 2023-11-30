@@ -1,0 +1,21 @@
+<div>
+    <h3> LOGIN </h3>
+
+    <form class="forms-sample" novalidate id='loginForm' *ngIf="loginForm" [formGroup]="loginForm">
+        <div class="col-lg-12">
+            <label for="exampleInputEmail1" class="form-label">User</label>
+            <input autocomplete="off" type="text" class="form-control" formControlName="username"
+                id="exampleInputEmail1">
+        </div>
+        <div class="col-lg-12">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input autocomplete="off" type="password" class="form-control" formControlName="password"
+                id="exampleInputPassword1">
+        </div>
+        <div class="mt-2">
+            <button [disabled]="!loginForm.valid" type="submit" class="btn btn-primary me-2 mb-2 mb-md-0"
+                (click)="onLoggedin($event)">Login
+            </button>
+        </div>
+    </form>
+</div>

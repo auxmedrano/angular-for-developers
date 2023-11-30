@@ -1,0 +1,25 @@
+<div class="p-4">
+    <p>heroes-list works!</p>
+
+    <div class="d-flex justify-content-center" *ngFor="let heroe of heroes">
+
+        <h4>{{heroe}}</h4>
+    </div>
+
+    <hr>
+
+    <h3>Counter: {{counter}} </h3>
+    <button (click)="increaseBy(+1)">+1</button>
+    <button (click)="resetCounter()">Reset</button>
+    <button (click)="increaseBy(-1)">-1</button>
+
+
+    <hr>
+    <h3> Heroes from backend service</h3>
+    <div class="p-3" *ngFor="let heroe of heroesList">
+
+        <section>{{heroe | json}}</section>
+        <hr>
+    </div>
+
+</div>
